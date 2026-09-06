@@ -5,4 +5,10 @@ function contrasenaValida(str) {
     }
     return validacion;
 }
-console.log(contrasenaValida2("2Fj(jjbFsuj"));
+
+// 📌 Feedback Docente (Profesor Axel):
+// 1. Corregido el nombre en el console.log: tenías 'contrasenaValida2' lo que tiraba ReferenceError.
+// 2. Recomendación de simplificación:
+// return str === "2Fj(jjbFsuj" || str === "eoZiugBf&g9";
+
+console.log(contrasenaValida("2Fj(jjbFsuj"));
