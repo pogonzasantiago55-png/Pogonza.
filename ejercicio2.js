@@ -7,18 +7,33 @@
 // ==============================================================================
 
 function calcularImpuestos(edad, ingresos) {
+    // Tu código acá:
     let calculo = 0;
     let validar_edad = 18;
     let validar_ingresos = 1000;
-    if(edad >= validar_edad && ingresos >= validar_ingresos){
-       calculo = ingresos * 0.40;
-       return calculo;
+    if (edad >= validar_edad && ingresos >= validar_ingresos) {
+        let calculo = ingresos * 0.40;
+        return calculo
     }
-    return calculo;
+    return calculo
 }
+console.log(calcularImpuestos(18, 1000));
 
 // 📌 Feedback Docente (Profesor Axel):
-// 1. Ojo con la redeclaración de variables: Adentro del `if` tenías `let calculo = ...`, redeclarando la variable `calculo` del ámbito exterior.
-// 2. Podés retornar directamente `ingresos * 0.4` si se cumplen las condiciones o `0` al final.
+// Muy bien resuelto. Ojo con redeclarar `let calculo` dentro del bloque `if`.
+// Para acostumbrarnos a la estructura limpia de variable auxiliar con valor por defecto y retorno único al final:
+
+function calcularImpuestos(edad, ingresos) {
+    let impuesto = 0; // Valor por defecto
+
+    if (edad >= 18 && ingresos >= 1000) {
+        impuesto = ingresos * 0.4;
+    }
+
+    return impuesto;
+}
 
 console.log(calcularImpuestos(18, 1000));
+console.log(calcularImpuestos(40, 10000));
+console.log(calcularImpuestos(17, 5000));
+console.log(calcularImpuestos(30, 500));

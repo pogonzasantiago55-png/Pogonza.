@@ -5,9 +5,9 @@
 // números enteros dentro de ese rango (incluyendo los extremos).
 // ==============================================================================
 
-function sumarRango(numeroInicial, numeroFinal){
+function sumarRango(numeroInicial, numeroFinal) {
     let suma = 0;
-    for (let i = numeroInicial ; i <= numeroFinal; i++) {
+    for (let i = numeroInicial; i <= numeroFinal; i++) {
         suma = suma + i;
     }
     return suma;

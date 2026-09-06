@@ -7,15 +7,27 @@
 
 function contrasenaValida(str) {
     let validacion = false;
-    if(str === "2Fj(jjbFsuj" || str === "eoZiugBf&g9"){
-      validacion = !validacion;
+    if (str === "2Fj(jjbFsuj" || str === "eoZiugBf&g9") {
+        validacion = !validacion;
     }
     return validacion;
 }
+console.log(contrasenaValida2("2Fj(jjbFsuj"));
 
 // 📌 Feedback Docente (Profesor Axel):
-// 1. Corregido el nombre en el console.log: tenías 'contrasenaValida2' lo que tiraba ReferenceError.
-// 2. Recomendación de simplificación:
-// return str === "2Fj(jjbFsuj" || str === "eoZiugBf&g9";
+// Muy bien resuelto. Ojo con la llamada en consola que tenía 'contrasenaValida2' arrojando ReferenceError por el tipado del nombre.
+// Para acostumbrarnos a la estructura limpia de retorno booleano o variable de resultado con retorno único al final:
+
+function contrasenaValida(str) {
+    let esValida = false;
+
+    if (str === "2Fj(jjbFsuj" || str === "eoZiugBf&g9") {
+        esValida = true;
+    }
+
+    return esValida;
+}
 
 console.log(contrasenaValida("2Fj(jjbFsuj"));
+console.log(contrasenaValida("eoZiugBf&g9"));
+console.log(contrasenaValida("hola"));

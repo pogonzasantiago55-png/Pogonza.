@@ -8,21 +8,42 @@
 // ==============================================================================
 
 function fizzBuzz(num) {
+
     if (num % 3 === 0 && num % 5 === 0) {
         return "fizzbuzz";
     }
-    else if(num % 3 === 0){
-        return "fizz";
+    else if (num % 3 === 0) {
+        return "fizz"
     }
-    else if(num % 5 === 0){
-        return "buzz";
+    else if (num % 5 === 0) {
+        return "buzz"
     }
     else {
         return num;
     }
+
+
 }
+console.log(fizzBuzz(30));
 
 // 📌 Feedback Docente (Profesor Axel):
-// ¡Excelente lógica, Santiago! El orden evaluando primero el múltiplo simultáneo de 3 y 5 es impecable.
+// ¡Impecable! Muy bien evaluada la condición combinada primero. Te dejo la estructura con variable auxiliar con valor por defecto y retorno único al final:
 
+function fizzBuzz(num) {
+    let resultado = num; // Valor por defecto si no cumple ninguna condición
+
+    if (num % 3 === 0 && num % 5 === 0) {
+        resultado = "fizzbuzz";
+    } else if (num % 3 === 0) {
+        resultado = "fizz";
+    } else if (num % 5 === 0) {
+        resultado = "buzz";
+    }
+
+    return resultado;
+}
+
+console.log(fizzBuzz(6));
+console.log(fizzBuzz(20));
 console.log(fizzBuzz(30));
+console.log(fizzBuzz(8));
